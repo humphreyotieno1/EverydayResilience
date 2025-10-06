@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: color(display-p3 0.973 0.98 0.976);
+  --color-foreground: color(display-p3 0.082 0.133 0.118);
+  --color-muted: color(display-p3 0.878 0.913 0.905);
+  --color-muted-foreground: color(display-p3 0.313 0.427 0.388);
+  --color-primary: color(display-p3 0.203 0.525 0.443);
+  --color-primary-foreground: color(display-p3 0.953 0.984 0.97);
+  --color-secondary: color(display-p3 0.415 0.631 0.58);
+  --color-secondary-foreground: color(display-p3 0.988 0.996 0.992);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: color(display-p3 0.078 0.117 0.109);
+    --color-foreground: color(display-p3 0.94 0.964 0.956);
+    --color-muted: color(display-p3 0.141 0.215 0.203);
+    --color-muted-foreground: color(display-p3 0.71 0.819 0.78);
+    --color-primary: color(display-p3 0.266 0.627 0.533);
+    --color-primary-foreground: color(display-p3 0.972 0.991 0.984);
+    --color-secondary: color(display-p3 0.258 0.462 0.409);
+    --color-secondary-foreground: color(display-p3 0.949 0.981 0.971);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
