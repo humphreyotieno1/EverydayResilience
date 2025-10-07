@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { SiteFooter } from "@/components/layout/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
 import { heading, sans } from "@/lib/fonts";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
@@ -37,9 +37,9 @@ export default function RootLayout({
         className={`${sans.variable} ${heading.variable} min-h-screen bg-background text-foreground antialiased`}
       >
         <div className="relative flex min-h-screen flex-col">
-          <SiteHeader />
+          <Header />
           <div className="flex-1">{children}</div>
-          <SiteFooter />
+          <Footer />
         </div>
         <Toaster />
       </body>
