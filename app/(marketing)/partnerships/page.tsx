@@ -18,7 +18,7 @@ const partnershipOptions = [
       "Receive quarterly impact updates",
       "Option to underwrite specific schools or community centres",
     ],
-    image: "/partnerships/partner-1.jpg",
+    image: "/partnerships/sponsor.jpg",
   },
   {
     title: "Corporate & Faith Partnerships",
@@ -29,7 +29,7 @@ const partnershipOptions = [
       "Customised programme design (workshops, debriefs, policies)",
       "Regular review meetings and impact reports",
     ],
-    image: "/partnerships/partner-2.jpg",
+    image: "/partnerships/collaboration.jpg",
   },
   {
     title: "Resource Collaborations",
@@ -40,7 +40,7 @@ const partnershipOptions = [
       "Co-author or review content drafts",
       "Launch with facilitated training or webinars",
     ],
-    image: "/partnerships/partner-3.jpg",
+    image: "/partnerships/resource.jpg",
   },
 ];
 
@@ -156,9 +156,9 @@ export default function PartnershipsPage() {
                 <CardTitle className="text-lg text-foreground">Bank details (KE)</CardTitle>
               </CardHeader>
               <CardContent className="space-y-1">
-                <p>Account Name: Everyday Resilience Counselling</p>
-                <p>Bank: Cooperative Bank of Kenya</p>
-                <p>Branch: Thika Road Mall</p>
+                <p>Account Name: ERC</p>
+                <p>Bank: Bank of Kenya</p>
+                <p>Branch: Nairobi</p>
                 <p>Account Number: 123456789</p>
                 <p>Swift Code: KCOOKENA</p>
               </CardContent>
@@ -168,7 +168,7 @@ export default function PartnershipsPage() {
                 <CardTitle className="text-lg text-foreground">M-Pesa PayBill</CardTitle>
               </CardHeader>
               <CardContent className="space-y-1">
-                <p>Business Number: 501234</p>
+                <p>Business Number: 1234</p>
                 <p>Account: EVERYDAY</p>
               </CardContent>
             </Card>

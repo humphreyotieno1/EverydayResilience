@@ -14,12 +14,12 @@ const resourceData = {
       {
         title: "Understanding Trauma Responses",
         description: "Learn how the nervous system reacts to stress and practical steps for grounding.",
-        href: "#",
+        href: "/contact",
       },
       {
         title: "Caregiver Self-Care Toolkit",
         description: "Daily routines and reflective exercises to sustain your own wellbeing while supporting others.",
-        href: "#",
+        href: "/contact",
       },
     ],
   },
@@ -30,12 +30,12 @@ const resourceData = {
       {
         title: "Walking with Teens through Anxiety",
         description: "Communication tools for parents and mentors supporting adolescents through worry and overwhelm.",
-        href: "#",
+        href: "/contact",
       },
       {
         title: "Creating Safer Classrooms",
         description: "Trauma-informed practices educators can embed in their daily routines.",
-        href: "#",
+        href: "/contact",
       },
     ],
   },
@@ -46,12 +46,12 @@ const resourceData = {
       {
         title: "Crisis Response Checklist",
         description: "A step-by-step guide for organisations responding to critical incidents.",
-        href: "#",
+        href: "/contact",
       },
       {
         title: "Session Preparation Worksheet",
         description: "Questions to reflect on before counselling sessions to make the most of your time.",
-        href: "#",
+        href: "/contact",
       },
     ],
   },
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
 
       <section className="container mx-auto space-y-12 px-4">
         <Tabs defaultValue="guides" className="w-full">
-          <TabsList className="flex flex-wrap gap-2 rounded-full bg-muted/40 p-2">
+          <TabsList className="flex flex-wrap gap-2 rounded-full bg-muted/40">
             {Object.entries(resourceData).map(([key, value]) => {
               const Icon = value.icon;
               return (

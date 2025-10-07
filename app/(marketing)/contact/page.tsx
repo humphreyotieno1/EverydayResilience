@@ -113,10 +113,10 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="relative h-48 w-full overflow-hidden rounded-2xl border border-muted/30">
-                  <Image src="/map-placeholder.jpg" alt="Nairobi office map" fill className="object-cover" />
+                  <Image src="/contact.jpg" alt="Nairobi office map" fill className="object-cover" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Everyday Resilience Counselling, Thika Road Mall, Nairobi, Kenya. We also offer virtual sessions across East Africa and internationally.
+                  Everyday Resilience Counselling, Nairobi, Kenya. We also offer virtual sessions across East Africa and internationally.
                 </p>
                 <Button asChild variant="outline" className="w-full rounded-full text-xs font-semibold uppercase tracking-[0.2em]">
                   <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">

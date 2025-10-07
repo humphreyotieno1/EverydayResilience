@@ -12,7 +12,7 @@ const stories = [
       "After months of silence, counseling sessions provided a safe space for Amina to process loss and reconnect with her passions.",
     impact:
       "With weekly sessions and caregiver involvement, family communication improved and anxiety decreased significantly.",
-    image: "/stories/story-1.jpg",
+    image: "/stories/teens.jpg",
   },
   {
     title: "“Teachers now understand trauma triggers”",
@@ -20,7 +20,7 @@ const stories = [
       "A partner school engaged our trauma-informed series, equipping teachers to respond with empathy and consistency.",
     impact:
       "Disciplinary incidents dropped by 40% and learners requested ongoing support groups.",
-    image: "/stories/story-2.jpg",
+    image: "/stories/teachers.jpg",
   },
   {
     title: "“Frontline caregivers feel supported”",
@@ -28,7 +28,7 @@ const stories = [
       "NGO staff receive monthly debriefs and wellbeing check-ins, reducing burnout and compassion fatigue.",
     impact:
       "Teams report renewed purpose and practice daily grounding routines together.",
-    image: "/stories/story-3.jpg",
+    image: "/stories/caregivers.jpg",
   },
 ];
 
