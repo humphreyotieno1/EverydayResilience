@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { heading, sans } from "@/lib/fonts";
 import "./globals.css";
+import { FloatingActions } from "@/components/shared/floating-actions";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default function RootLayout({
           <div className="flex-1">{children}</div>
           <Footer />
         </div>
+        <FloatingActions />
         <Toaster />
       </body>
     </html>
