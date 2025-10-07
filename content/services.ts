@@ -3,55 +3,60 @@ export type ServiceCategory = {
   title: string;
   summary: string;
   features: string[];
+  image: string;
 };
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    slug: "individual",
-    title: "Individual Counselling",
+    slug: "general",
+    title: "General Counselling",
     summary:
-      "One-on-one sessions for adults, teens, and children navigating anxiety, grief, trauma, and life transitions.",
+      "Personalised, trauma-informed sessions for adults, teens, and children, designed to help you process anxiety, grief, trauma, and major life transitions. We create a safe, supportive space to explore your story, build resilience, and develop practical coping strategies for everyday challenges.",
     features: [
       "Trauma-informed psychotherapy",
       "Grief and loss processing",
       "Anxiety and stress management",
       "Spiritual integration and grounding practices",
     ],
+    image: "/services/general.jpg",
   },
   {
     slug: "family",
     title: "Family & Parenting Support",
     summary:
-      "Coaching and therapy for caregivers addressing attachment needs, blending families, and behavioural challenges.",
+      "Comprehensive coaching and therapy for caregivers, parents, and families navigating attachment needs, blended family dynamics, and behavioural or emotional challenges. We partner with you to strengthen relationships, foster secure bonds, and create nurturing home environments for children and teens.",
     features: [
       "Parent-child relationship strengthening",
       "Attachment and bonding support",
       "Behavioural and emotional regulation strategies",
       "Caregiver debriefs and wellbeing plans",
     ],
+    image: "/services/family.jpg",
   },
   {
-    slug: "group",
-    title: "Group Therapy & Workshops",
+    slug: "anxiety",
+    title: "Anxiety Treatment",
     summary:
-      "Purposeful spaces for shared healing, psychoeducation, and skills building in schools, churches, and workplaces.",
+      "Gentle, evidence-based interventions for teens and adults experiencing anxiety, panic, or chronic worry. Our approach combines somatic techniques, cognitive reframing, and mindfulness to help you understand anxiety triggers, regain a sense of calm, and build confidence in daily life.",
     features: [
-      "School-based resilience groups",
-      "Faith community support circles",
-      "Leadership and caregiver retreats",
-      "Custom psychoeducation workshops",
+      "Somatic and breath regulation",
+      "Cognitive reframing techniques",
+      "Grounding and mindfulness practices",
+      "Short-term crisis support",
     ],
+    image: "/services/anxiety.jpg",
   },
   {
-    slug: "organisations",
-    title: "Organisational Support",
+    slug: "depression",
+    title: "Depression Therapy",
     summary:
-      "Trauma-informed care consulting, policy development, and ongoing staff wellness programmes for NGOs and institutions.",
+      "A compassionate, non-judgmental space to be seen, heard, and supported as you navigate depression or seasons of emotional heaviness. We use integrative therapies to help you rediscover hope, reconnect with meaning, and develop tools for sustainable wellbeing, with referrals for psychiatric care as needed.",
     features: [
-      "Trauma-informed care frameworks",
-      "Safeguarding and response protocols",
-      "Employee assistance programmes",
-      "Critical incident debriefing",
+      "Narrative and expressive therapy",
+      "Behavioural activation coaching",
+      "Integrative faith-sensitive support",
+      "Referrals for psychiatric consultation",
     ],
+    image: "/services/depression.jpg",
   },
 ];
