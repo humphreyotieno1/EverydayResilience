@@ -1,4 +1,5 @@
 import { CTABanner } from "@/components/sections/cta-banner";
+import { FAQSection } from "@/components/sections/faq";
 import { HeroSection } from "@/components/sections/hero";
 import { ImpactSection } from "@/components/sections/impact";
 import { ServicesSection } from "@/components/sections/services";
@@ -12,6 +13,7 @@ export default function Home() {
       <ImpactSection />
       <TestimonialsSection />
       <CTABanner />
+      <FAQSection />
     </main>
   );
 }
