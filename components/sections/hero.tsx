@@ -92,7 +92,7 @@ export function HeroSection() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/contact"
-                className="w-full rounded-full bg-slate-900 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-lg transition-colors duration-300 hover:bg-slate-800 sm:w-auto"
+                className="w-full rounded-full bg-slate-900 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-lg transition-colors duration-300 hover:bg-slate-400 sm:w-auto"
               >
                 Make an appointment
               </Link>

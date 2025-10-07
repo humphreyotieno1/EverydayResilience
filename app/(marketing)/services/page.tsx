@@ -42,7 +42,7 @@ export default function ServicesPage() {
         <TabsList className="flex flex-wrap gap-2 bg-muted/60 p-2">
           {serviceCategories.map((category) => (
             <TabsTrigger key={category.slug} value={category.slug} className="rounded-full px-4 py-2 text-sm">
-              {category.label}
+              {category.title}
             </TabsTrigger>
           ))}
         </TabsList>

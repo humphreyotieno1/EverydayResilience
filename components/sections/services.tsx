@@ -1,82 +1,91 @@
+import Image from "next/image";
 import Link from "next/link";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "Individual Counselling",
+    title: "General Counselling",
     description:
-      "Personalized sessions supporting adults, teens, and children through anxiety, grief, trauma, and life transitions.",
-    tags: ["Trauma-informed", "Evidence-based"],
-    href: "/services/individual",
+      "Explore how personalised counselling can help you regulate emotions, process trauma, and rebuild hope.",
+    image: "/services/general.jpg",
+    href: "/services/general",
   },
   {
-    title: "Family & Parenting Support",
+    title: "Family Counselling",
     description:
-      "Guidance for caregivers navigating behavioural challenges, attachment needs, and parenting after trauma.",
-    tags: ["Parent coaching", "Attachment"],
-    href: "/services/parenting",
+      "Strengthen attachment, heal ruptures, and create nurturing rhythms for your entire household.",
+    image: "/services/family.jpg",
+    href: "/services/family",
   },
   {
-    title: "Group Therapy & Workshops",
+    title: "Anxiety Treatment",
     description:
-      "Facilitated healing spaces and psychoeducation for schools, churches, and community organizations.",
-    tags: ["Group sessions", "Psychoeducation"],
-    href: "/services/workshops",
+      "Gentle, evidence-based approaches that equip teens and adults to navigate anxiety with confidence.",
+    image: "/services/anxiety.jpg",
+    href: "/services/anxiety",
   },
   {
-    title: "Crisis Intervention & Debriefing",
+    title: "Depression Therapy",
     description:
-      "Rapid response and emotional first aid for organizations after critical incidents or collective trauma.",
-    tags: ["Response", "Stabilization"],
-    href: "/services/crisis",
+      "Offer yourself space to be seen, heard, and supported as you journey through seasons of heaviness.",
+    image: "/services/depression.jpg",
+    href: "/services/depression",
   },
 ];
 
 export function ServicesSection() {
   return (
-    <section className="bg-background py-20">
+    <section className="relative overflow-hidden bg-white py-20">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 via-background to-white" />
       <div className="container mx-auto space-y-12 px-4">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-wide text-primary">What we offer</p>
           <h2 className="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
             Comprehensive support for every stage of healing
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            From one-on-one sessions to community-based programmes, our counsellors bring compassionate expertise to help you build resilience day by day.
+          <p className="mt-3 text-base text-slate-500">
+            Discover how compassionate counselling promotes emotional wellbeing, mental health, and lasting personal growth.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <Card key={service.title} className="flex flex-col justify-between border-muted/40 shadow-sm">
-              <CardHeader>
-                <CardTitle className="font-heading text-2xl text-foreground">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-base leading-relaxed text-muted-foreground">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex flex-wrap gap-2">
-                  {service.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="rounded-full">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-                >
-                  Learn more →
-                </Link>
-              </CardContent>
-            </Card>
+            <Link
+              key={service.title}
+              href={service.href}
+              className="group relative overflow-hidden rounded-3xl bg-slate-900/90 shadow-lg transition-transform duration-300 hover:-translate-y-1"
+            >
+              <Image
+                src={service.image}
+                alt={service.title}
+                width={420}
+                height={420}
+                className="h-64 w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent" aria-hidden />
+              <div className="absolute inset-x-0 bottom-0 space-y-3 p-6 text-white">
+                <h3 className="text-lg font-semibold">{service.title}</h3>
+                <p className="text-sm text-white/75">{service.description}</p>
+              </div>
+            </Link>
           ))}
         </div>
+
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Button asChild className="rounded-full bg-slate-900 px-8 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow hover:bg-slate-400">
+            <Link href="/services">Explore our services</Link>
+          </Button>
+          <Button
+            asChild
+            variant="ghost"
+            className="rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-700 hover:text-slate-900"
+          >
+            <Link href="/about">Learn more about us</Link>
+          </Button>
+        </div>
       </div>
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-32 bg-[url('/wave-border.svg')] bg-cover bg-top bg-repeat-x" aria-hidden />
     </section>
   );
 }
