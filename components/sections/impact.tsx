@@ -1,46 +1,143 @@
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
 
-const pillars = [
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const impactSlides = [
   {
-    title: "Healing",
+    title: "Counselling Access",
     description:
-      "We centre safety, empathy, and evidence-based interventions to nurture long-term emotional wellbeing.",
+      "Over 500 children, teens, and caregivers supported with subsidised therapy across Nairobi and Kiambu.",
+    href: "/stories",
+    image: "/impact/impact1.jpg",
   },
   {
-    title: "Education",
+    title: "Trauma-Informed Training",
     description:
-      "Workshops and resources equip caregivers, teachers, and leaders with trauma-informed tools.",
+      "120+ caregivers and teachers equipped each year with trauma-competent care, attachment tools, and crisis response skills.",
+    href: "/services/workshops",
+    image: "/impact/impact2.jpg",
   },
   {
-    title: "Community",
+    title: "Community Outreach",
     description:
-      "Partnerships with schools, faith communities, and NGOs extend our support to those most in need.",
+      "Partnerships with faith communities and NGOs bringing psychoeducation circles, group counselling, and debriefs to underserved estates.",
+    href: "/partnerships",
+    image: "/impact/impact3.jpg",
   },
 ];
 
 export function ImpactSection() {
+  const [current, setCurrent] = useState(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const totalSlides = impactSlides.length;
+
+  const resetTimer = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  const goToSlide = (index: number) => {
+    resetTimer();
+    setCurrent((index + totalSlides) % totalSlides);
+  };
+
+  useEffect(() => {
+    timeoutRef.current = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % totalSlides);
+    }, 7000);
+
+    return resetTimer;
+  }, [current, totalSlides]);
+
   return (
-    <section className="bg-muted/40 py-20">
-      <div className="container mx-auto space-y-12 px-4">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-wide text-primary">Our impact</p>
-          <h2 className="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-            Rooted in compassion, growing resilient communities
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        {impactSlides.map((slide, idx) => (
+          <Image
+            key={slide.image}
+            src={slide.image}
+            alt="City skyline"
+            fill
+            priority={idx === 0}
+            className={cn(
+              "object-cover transition-opacity duration-1000 ease-in-out",
+              idx === current ? "opacity-100" : "opacity-0"
+            )}
+          />
+        ))}
+        <div className="absolute inset-0 bg-slate-900/70" aria-hidden />
+      </div>
+
+      <div className="container relative z-10 mx-auto space-y-12 px-4 py-24 text-white">
+        <div className="max-w-4xl space-y-6">
+          <div className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
+            High-impact ventures. Economic development. Social change.
+          </div>
+          <h2 className="font-heading text-4xl font-semibold sm:text-5xl">
+            Counselling that accelerates transformation
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Everyday Resilience Counselling was founded to ensure every child, caregiver, and community has access to the support they need to heal, flourish, and hope again.
+          <p className="max-w-2xl text-base text-white/80">
+            We collaborate with communities, innovators, and grassroots leaders to design courageous interventions that heal, educate, and empower.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {pillars.map((pillar) => (
-            <Card key={pillar.title} className="border-none bg-background/90 shadow-lg shadow-primary/10">
-              <CardContent className="space-y-3 p-6">
-                <h3 className="font-heading text-2xl text-foreground">{pillar.title}</h3>
-                <p className="text-sm text-muted-foreground">{pillar.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+
+        <div className="overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur">
+          <div className="grid gap-0 sm:grid-cols-3">
+            {impactSlides.map((slide, idx) => (
+              <button
+                key={slide.title}
+                type="button"
+                onClick={() => goToSlide(idx)}
+                className={cn(
+                  "flex flex-col gap-3 border-white/10 px-5 py-6 text-left transition-colors",
+                  idx !== totalSlides - 1 ? "border-b sm:border-b-0 sm:border-r" : "",
+                  idx === current ? "bg-white/10" : "hover:bg-white/5"
+                )}
+              >
+                <h3 className="text-lg font-semibold text-white">{slide.title}</h3>
+                <p className="text-sm text-white/70">{slide.description}</p>
+              </button>
+            ))}
+          </div>
         </div>
+      </div>
+
+      <div className="absolute inset-y-0 left-0 right-0 z-20 flex items-center justify-between px-4 sm:px-8">
+        <button
+          type="button"
+          className="hidden h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white transition-transform duration-200 hover:-translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 sm:flex"
+          onClick={() => goToSlide(current - 1)}
+          aria-label="Previous impact story"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          className="hidden h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white transition-transform duration-200 hover:translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 sm:flex"
+          onClick={() => goToSlide(current + 1)}
+          aria-label="Next impact story"
+        >
+          ›
+        </button>
+      </div>
+
+      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+        {impactSlides.map((_, idx) => (
+          <span
+            key={idx}
+            className={cn(
+              "h-2 w-6 rounded-full bg-white/40 transition-all",
+              idx === current ? "bg-white" : "opacity-70"
+            )}
+            aria-hidden
+          />
+        ))}
       </div>
     </section>
   );
