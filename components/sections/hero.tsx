@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const carouselImages = ["/bg1.jpg", "/background2.jpg", "/background1.jpg"];
 
 const heroStats = [
-  { value: "500+", label: "Clients Served" },
+  { value: "300+", label: "Clients Served" },
   { value: "95%", label: "Satisfaction Rate" },
   { value: "10+", label: "Years Experience" },
 ];

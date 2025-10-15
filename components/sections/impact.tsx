@@ -8,14 +8,14 @@ const impactSlides = [
   {
     title: "Counselling Access",
     description:
-      "Over 500 children, teens, and caregivers supported with subsidised therapy across Kenya.",
+      "Over 200 children, teens, and caregivers supported with subsidised therapy across Kenya.",
     href: "/stories",
     image: "/impact/impact1.jpg",
   },
   {
     title: "Trauma-Informed Training",
     description:
-      "120+ caregivers and teachers equipped each year with trauma-competent care, attachment tools, and crisis response skills.",
+      "Caregivers and teachers equipped each year with trauma-competent care, attachment tools, and crisis response skills.",
     href: "/services/workshops",
     image: "/impact/impact2.jpg",
   },

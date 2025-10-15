@@ -13,7 +13,7 @@ export const serviceCategories: ServiceCategory[] = [
     summary:
       "Personalised, trauma-informed sessions for adults, teens, and children, designed to help you process anxiety, grief, trauma, and major life transitions. We create a safe, supportive space to explore your story, build resilience, and develop practical coping strategies for everyday challenges.",
     features: [
-      "Trauma-informed psychotherapy",
+      "Trauma-informed therapy",
       "Grief and loss processing",
       "Anxiety and stress management",
       "Spiritual integration and grounding practices",
