@@ -158,7 +158,7 @@ export default function PartnershipsPage() {
               <CardContent className="space-y-1">
                 <p>Account Name: ERC</p>
                 <p>Bank: Bank of Kenya</p>
-                <p>Branch: Nairobi</p>
+                <p>Branch: Kakamega</p>
                 <p>Account Number: 123456789</p>
                 <p>Swift Code: KCOOKENA</p>
               </CardContent>

@@ -8,7 +8,7 @@ const impactSlides = [
   {
     title: "Counselling Access",
     description:
-      "Over 500 children, teens, and caregivers supported with subsidised therapy across Nairobi and Kiambu.",
+      "Over 500 children, teens, and caregivers supported with subsidised therapy across Kenya.",
     href: "/stories",
     image: "/impact/impact1.jpg",
   },

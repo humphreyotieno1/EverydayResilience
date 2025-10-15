@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "Do you offer virtual sessions?",
     answer:
-      "Yes. Sessions are available virtually across East Africa and internationally, with in-person options in Nairobi by appointment.",
+      "Yes. Sessions are available virtually across East Africa and internationally, with in-person options in Kakamega by appointment.",
   },
   {
     question: "How soon can I book a session?",

@@ -85,7 +85,6 @@ export default function ContactPage() {
               <CardContent className="space-y-2 text-sm text-muted-foreground">
                 <p>Email: {contactDetails.email}</p>
                 <p>Phone (Kenya): {contactDetails.phoneKe}</p>
-                <p>Phone (USA): {contactDetails.phoneUs}</p>
                 <p>Location: {contactDetails.location}</p>
                 <p>Hours: {contactDetails.officeHours}</p>
                 <p>Mail: {contactDetails.mailingAddress}</p>
@@ -108,15 +107,15 @@ export default function ContactPage() {
             </Card>
             <Card className="border-muted/40 bg-background shadow-sm">
               <CardHeader>
-                <CardTitle className="font-heading text-xl text-foreground">Visit our Nairobi office</CardTitle>
+                <CardTitle className="font-heading text-xl text-foreground">Visit our Kakamega office</CardTitle>
                 <CardDescription>Sessions by appointment only. Secure parking available on-site.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="relative h-48 w-full overflow-hidden rounded-2xl border border-muted/30">
-                  <Image src="/contact.jpg" alt="Nairobi office map" fill className="object-cover" />
+                  <Image src="/contact.jpg" alt="Kakamega office map" fill className="object-cover" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Everyday Resilience Counselling, Nairobi, Kenya. We also offer virtual sessions across East Africa and internationally.
+                  Everyday Resilience Counselling, Kakamega, Kenya. We also offer virtual sessions across East Africa and internationally.
                 </p>
                 <Button asChild variant="outline" className="w-full rounded-full text-xs font-semibold uppercase tracking-[0.2em]">
                   <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">

@@ -57,7 +57,6 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-white/70">
               <li>Email: {contactDetails.email}</li>
               <li>Phone (KE): {contactDetails.phoneKe}</li>
-              <li>Phone (US): {contactDetails.phoneUs}</li>
               <li>{contactDetails.location}</li>
               <li>{contactDetails.officeHours}</li>
             </ul>

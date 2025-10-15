@@ -9,11 +9,10 @@ export const siteNavigation = [
 
 export const contactDetails = {
   email: "info@everydayresilience.org",
-  phoneKe: "+254 711 000 000",
-  phoneUs: "+1 574 000 0000",
-  location: "Nairobi, Kenya",
+  phoneKe: "+254 712 302 318",
+  location: "Kakamega, Kenya",
   officeHours: "Monday – Saturday | 9:00AM – 5:00PM",
-  mailingAddress: "P.O. Box 16650-0010, Thome Estate, Nairobi",
+  mailingAddress: "P.O. Box 16650-0010, Example Estate, Kakamega",
 };
 
 export const socialLinks = [

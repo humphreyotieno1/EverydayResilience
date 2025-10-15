@@ -132,7 +132,7 @@ export default function ServicesPage() {
             Counselling pathways tailored to your needs
           </h2>
           <p className="text-base text-muted-foreground">
-            Sessions are available virtually or in-person (Nairobi). We begin with an intake consultation to co-create a care plan, establish goals, and choose modalities that fit your season. Subsidised options can be arranged through sponsorships and partner organisations.
+            Sessions are available virtually or in-person (Kakamega). We begin with an intake consultation to co-create a care plan, establish goals, and choose modalities that fit your season. Subsidised options can be arranged through sponsorships and partner organisations.
           </p>
           <p className="text-sm text-muted-foreground">
             We also offer clinical supervision, reflective practice groups, and staff wellness programmes for counsellors and caregivers working in high-impact environments.
