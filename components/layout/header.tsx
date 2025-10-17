@@ -67,7 +67,7 @@ export function Header() {
         <div className="mx-auto flex h-20 max-w-[1280px] items-center px-4 sm:h-24 sm:px-6">
         <Link
           href="/"
-          className="mr-auto flex items-center gap-3"
+          className="mr-auto mr-10 flex items-center gap-3"
           aria-label="Everyday Resilience home"
         >
           <span className="relative h-12 w-12 overflow-hidden rounded-full">
@@ -80,8 +80,11 @@ export function Header() {
             />
           </span>
           <div className="leading-tight sm:flex sm:flex-col">
-            <span className="font-heading text-lg font-semibold text-foreground">
-              EVERYDAY RESILIENCE
+            <span className="font-heading text-md font-semibold text-foreground">
+              EVERYDAY 
+            </span>
+            <span className="font-heading text-md font-semibold text-foreground">
+              RESILIENCE
             </span>
           </div>
         </Link>
