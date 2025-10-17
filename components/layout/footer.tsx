@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { NewsletterForm } from "@/components/sections/newsletter-form";
 import { contactDetails, siteNavigation } from "@/content/site";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
@@ -14,7 +15,7 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-slate-800 text-white">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/20 via-slate-900/90 to-slate-950" aria-hidden />
       <div className="container mx-auto px-6 py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1.1fr]">
           <div className="space-y-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">
@@ -50,6 +51,14 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="space-y-4 text-sm text-white/70">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Newsletter</h4>
+            <p className="text-sm text-white/70">
+              Receive monthly wellbeing practices, community updates, and invitations to upcoming workshops.
+            </p>
+            <NewsletterForm source="footer" variant="dark" />
           </div>
 
           <div className="space-y-4">

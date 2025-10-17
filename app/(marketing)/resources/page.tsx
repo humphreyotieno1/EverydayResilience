@@ -2,8 +2,8 @@ import { BookOpen, Download, FileText } from "lucide-react";
 import type { Metadata } from "next";
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { NewsletterForm } from "@/components/sections/newsletter-form";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const resourceData = {
@@ -177,11 +177,9 @@ export default function ResourcesPage() {
             </CardHeader>
             <CardContent className="space-y-4 text-sm text-muted-foreground">
               <p>New to Everyday Resilience? Start with our core guide on grounding practices, then explore themed series each month.</p>
-              <Button className="w-full rounded-full bg-slate-900 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white hover:bg-slate-800">
-                Subscribe for updates
-              </Button>
+              <NewsletterForm source="resources" />
               <p className="text-xs text-muted-foreground">
-                We respect your inbox. Expect one email per month and the option to opt out anytime.
+                Expect one email each month. A welcome note will arrive shortly after you subscribe with tips on what to explore first.
               </p>
             </CardContent>
           </Card>
