@@ -46,7 +46,10 @@ const testimonials = [
 export function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
   const total = testimonials.length;
+  const itemsPerView = 3;
+  const maxIndex = Math.max(total - itemsPerView, 0);
 
   const resetTimer = () => {
     if (timeoutRef.current) {
@@ -56,16 +59,32 @@ export function TestimonialsSection() {
 
   const goTo = (index: number) => {
     resetTimer();
-    setCurrent((index + total) % total);
+    if (itemsPerView >= total) {
+      setCurrent(0);
+      return;
+    }
+
+    const boundedIndex = Math.max(0, Math.min(index, maxIndex));
+    setCurrent(boundedIndex);
   };
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
-      setCurrent((prev) => (prev + 1) % total);
+      setCurrent((prev) => {
+        if (itemsPerView >= total) {
+          return 0;
+        }
+
+        const next = prev + 1;
+        if (next > maxIndex) {
+          return 0;
+        }
+        return next;
+      });
     }, 6000);
 
     return resetTimer;
-  }, [current, total]);
+  }, [current, total, maxIndex]);
 
   return (
     <section className="bg-white py-20">
@@ -81,49 +100,75 @@ export function TestimonialsSection() {
         </div>
 
         <div className="relative">
-          <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-6 [scrollbar-width:none] sm:justify-center sm:overflow-visible">
-            {testimonials.map((testimonial, idx) => (
-              <article
-                key={testimonial.name}
-                className={cn(
-                  "flex min-w-[18rem] snap-start flex-col gap-4 rounded-3xl border border-slate-100 bg-white px-6 py-8 text-left shadow-sm transition-all duration-300 sm:min-w-[20rem] md:min-w-[22rem]",
-                  idx === current ? "shadow-lg" : "opacity-90"
-                )}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full bg-primary/10">
-                    <Image
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
+          <div className="overflow-hidden">
+            <div
+              ref={trackRef}
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${current * (100 / itemsPerView)}%)` }}
+            >
+              {testimonials.map((testimonial) => (
+                <article
+                  key={testimonial.name}
+                  className="flex w-full flex-col gap-4 px-3 py-6 text-left sm:px-4 md:px-5"
+                  style={{ flex: `0 0 ${100 / itemsPerView}%` }}
+                >
+                  <div className="flex h-full flex-col rounded-[28px] border border-slate-100 bg-white p-6 shadow-sm">
+                    <div className="flex items-center gap-3">
+                      <div className="relative h-12 w-12 overflow-hidden rounded-full bg-primary/10">
+                        <Image
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="leading-tight">
+                        <p className="text-sm font-semibold text-slate-900">{testimonial.name}</p>
+                        <p className="text-xs text-slate-500">{testimonial.role}</p>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-sm leading-relaxed text-slate-600">{testimonial.quote}</p>
                   </div>
-                  <div className="leading-tight">
-                    <p className="text-sm font-semibold text-slate-900">{testimonial.name}</p>
-                    <p className="text-xs text-slate-500">{testimonial.role}</p>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed text-slate-600">{testimonial.quote}</p>
-              </article>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-6 flex justify-center gap-2">
-            {testimonials.map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => goTo(idx)}
-                className={cn(
-                  "h-2.5 w-2.5 rounded-full bg-slate-300 transition-all duration-300 hover:bg-slate-400",
-                  idx === current && "scale-125 bg-primary"
-                )}
-                aria-label={`Show testimonial ${idx + 1}`}
-              />
-            ))}
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <button
+              type="button"
+              onClick={() => goTo(current - 1)}
+              className="rounded-full border border-slate-200 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-600 transition-colors hover:border-primary/40 hover:text-primary"
+              aria-label="Previous testimonial"
+            >
+              Prev
+            </button>
+            <div className="flex items-center gap-2">
+              {Array.from({ length: itemsPerView >= total ? 1 : maxIndex + 1 }).map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => goTo(idx)}
+                  className={cn(
+                    "h-2.5 w-2.5 rounded-full bg-slate-300 transition-all duration-300 hover:bg-slate-400",
+                    idx === current && "scale-125 bg-primary"
+                  )}
+                  aria-label={`Show testimonial ${idx + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => goTo(current + 1)}
+              className="rounded-full border border-slate-200 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-600 transition-colors hover:border-primary/40 hover:text-primary"
+              aria-label="Next testimonial"
+            >
+              Next
+            </button>
           </div>
         </div>
+
+        <p className="text-center text-xs text-slate-400">Swipe or use the controls to view more stories.</p>
       </div>
     </section>
   );

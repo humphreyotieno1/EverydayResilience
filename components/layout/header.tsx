@@ -7,12 +7,6 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import {
   Sheet,
   SheetClose,
   SheetContent,
@@ -41,25 +35,23 @@ const desktopCtas = [
 
 function NavLink({ href, label, isActive }: { href: string; label: string; isActive: boolean }) {
   return (
-    <NavigationMenuItem>
-      <NavigationMenuLink
-        href={href}
+    <Link
+      href={href}
+      className={cn(
+        "group/link relative px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-primary",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2",
+        isActive && "text-primary"
+      )}
+    >
+      {label}
+      <span
+        aria-hidden
         className={cn(
-          "group/link relative px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-primary",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2",
-          isActive && "text-primary"
+          "pointer-events-none absolute inset-x-1/4 -bottom-1 h-[2px] rounded-full bg-primary opacity-0 transition-opacity duration-200 group-hover/link:opacity-100",
+          isActive && "opacity-100"
         )}
-      >
-        {label}
-        <span
-          aria-hidden
-          className={cn(
-            "pointer-events-none absolute inset-x-1/4 -bottom-1 h-[2px] rounded-full bg-primary opacity-0 transition-opacity duration-200 group-hover/link:opacity-100",
-            isActive && "opacity-100"
-          )}
-        />
-      </NavigationMenuLink>
-    </NavigationMenuItem>
+      />
+    </Link>
   );
 }
 
@@ -72,7 +64,7 @@ export function Header() {
       
       
       <div className="border-b border-muted/30 bg-background/90 shadow-sm backdrop-blur">
-        <div className="container mx-auto flex h-24 items-center px-6">
+        <div className="mx-auto flex h-20 max-w-[1280px] items-center px-4 sm:h-24 sm:px-6">
         <Link
           href="/"
           className="mr-auto flex items-center gap-3"
@@ -94,28 +86,26 @@ export function Header() {
           </div>
         </Link>
 
-        <div className="hidden items-center gap-8 lg:flex">
-          <NavigationMenu className="border-x border-transparent">
-            <NavigationMenuList className="flex items-center gap-3">
-              {siteNavigation.map((item) => (
-                <NavLink
-                  key={item.href}
-                  href={item.href}
-                  label={item.label}
-                  isActive={pathname === item.href}
-                />
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+        <div className="hidden items-center gap-6 xl:gap-8 lg:flex">
+          <nav className="flex items-center gap-1 xl:gap-3">
+            {siteNavigation.map((item) => (
+              <NavLink
+                key={item.href}
+                href={item.href}
+                label={item.label}
+                isActive={pathname === item.href}
+              />
+            ))}
+          </nav>
 
-          <div className="ml-6 flex items-center gap-3">
+          <div className="ml-3 flex items-center gap-2 xl:ml-5 xl:gap-3">
             {desktopCtas.map((cta) => (
               <Button
                 key={cta.href}
                 asChild
                 size="sm"
                 className={cn(
-                  "rounded-none px-6 py-2 text-xs font-semibold uppercase tracking-[0.16em] shadow-sm transition-transform hover:-translate-y-0.5",
+                  "rounded-full px-3 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.12em] shadow-sm transition-transform hover:-translate-y-0.5 xl:px-5 xl:text-[0.7rem]",
                   cta.className
                 )}
               >
