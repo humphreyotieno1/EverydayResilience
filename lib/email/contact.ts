@@ -3,6 +3,7 @@ import type { Attachment } from "nodemailer/lib/mailer";
 import { contactDetails } from "@/content/site";
 import { FROM_EMAIL, FROM_NAME, transporter } from "@/lib/email/mailer";
 import {
+  EMBEDDED_LOGO_PNG_BASE64,
   LOGO_CID,
   formatMultilineHtml,
   formatParagraph,
@@ -16,7 +17,7 @@ import type { ContactFormValues } from "@/lib/validation/contact";
 
 const logoAttachment: Attachment = {
   filename: "logo.png",
-  path: `${process.cwd()}/public/logo.jpeg`,
+  content: Buffer.from(EMBEDDED_LOGO_PNG_BASE64, "base64"),
   cid: LOGO_CID,
 };
 

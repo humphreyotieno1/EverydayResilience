@@ -1,8 +1,14 @@
+import fs from "node:fs";
+import path from "node:path";
+
 import { contactDetails, socialLinks } from "@/content/site";
 
 const baseFont = "'Inter', 'Segoe UI', Helvetica, Arial, sans-serif";
 
 export const LOGO_CID = "erc-logo";
+
+const logoPath = path.join(process.cwd(), "public", "logo.jpeg");
+export const EMBEDDED_LOGO_PNG_BASE64 = fs.readFileSync(logoPath).toString("base64");
 
 type DetailRow = {
   label: string;
