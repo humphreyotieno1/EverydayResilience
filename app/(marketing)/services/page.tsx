@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 import type { Metadata } from "next";
 
@@ -10,14 +11,58 @@ import { serviceCategories } from "@/content/services";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Counselling Services",
+  title: "Counselling & Therapy Services in Kenya | Everyday Resilience",
   description:
-    "Explore the counselling, training, and organisational support services offered by Everyday Resilience Counselling.",
+    "Explore individual, couples, family, and organisational counselling services across Kenya. Trauma-informed, faith-sensitive support from Everyday Resilience Counselling.",
+  openGraph: {
+    title: "Counselling & Therapy Services in Kenya",
+    description:
+      "Comprehensive trauma-informed counselling, workshops, and wellbeing programmes for individuals, families, and organisations across Kenya.",
+  },
 };
 
 export default function ServicesPage() {
   return (
     <div className="space-y-20 pb-16">
+      <Script
+        id="services-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What counselling services does Everyday Resilience Counselling Kenya provide?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "We provide trauma-informed individual, couples, family, caregiver, and organisational counselling services across Kenya, available virtually and in-person in Kakamega.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer virtual counselling sessions in Kenya?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. We deliver secure virtual counselling sessions alongside in-person appointments, making it easier for clients across Kenya and the diaspora to access support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can organisations partner with Everyday Resilience Counselling?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Organisations can book reflective practice groups, staff wellness workshops, embedded counsellors, and trauma-informed policy support by contacting our coordination team.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-900/80 py-24 text-white">
         <div className="absolute inset-0 bg-[url('/bg1.jpg')] bg-cover bg-center opacity-40" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/70 to-slate-900/40" aria-hidden />
@@ -36,10 +81,13 @@ export default function ServicesPage() {
           <div className="max-w-3xl space-y-5">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">What we do</p>
             <h1 className="font-heading text-4xl font-semibold leading-tight sm:text-5xl">
-              Trauma-informed counselling for individuals, families, and communities
+              Trauma-informed counselling in Kenya for individuals, families, and communities
             </h1>
             <p className="text-base text-white/80">
               We partner with you to design care that honours your story—whether you&apos;re seeking personal therapy, guidance for your family, or holistic wellness programmes for your organisation.
+            </p>
+            <p className="text-base text-white/80">
+              Everyday Resilience Counselling provides evidence-based counselling services across Kenya, combining local expertise with faith-sensitive support to help you navigate trauma, stress, and life transitions.
             </p>
             <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
               <span className="rounded-full border border-white/30 px-4 py-2">Virtual & in-person</span>
@@ -106,23 +154,59 @@ export default function ServicesPage() {
       </section>
 
       <section className="container mx-auto grid gap-8 rounded-3xl border border-muted/30 bg-background p-8 shadow-sm md:grid-cols-3">
-        <div className="space-y-3">
-          <h3 className="font-heading text-xl text-foreground">Why choose Everyday Resilience?</h3>
-          <p className="text-sm text-muted-foreground">
-            We blend evidence-based therapy with deep cultural and faith sensitivity, ensuring every client feels seen, heard, and respected. Our team is committed to ongoing professional development and ethical, trauma-informed care.
+        <div className="space-y-3 md:col-span-3">
+          <h2 className="font-heading text-3xl font-semibold text-foreground">
+            Why choose Everyday Resilience Counselling Kenya?
+          </h2>
+          <p className="text-base text-muted-foreground">
+            We blend evidence-based therapy with deep cultural and faith sensitivity, ensuring every client feels seen, heard, and respected. Our team is committed to ongoing professional development and ethical, trauma-informed care across Kenya.
           </p>
         </div>
         <div className="space-y-3">
-          <h3 className="font-heading text-xl text-foreground">Community-centred approach</h3>
+          <h3 className="font-heading text-xl text-foreground">Trauma-informed clinicians</h3>
           <p className="text-sm text-muted-foreground">
-            We partner with schools, churches, and organisations to build sustainable support systems. Our programmes are designed to strengthen families, empower caregivers, and foster resilience across communities.
+            Our counsellors draw from trauma-informed modalities, somatic practices, and reflective supervision to deliver safe, regulated support in every session.
+          </p>
+        </div>
+        <div className="space-y-3">
+          <h3 className="font-heading text-xl text-foreground">Community-centred partnerships</h3>
+          <p className="text-sm text-muted-foreground">
+            We partner with schools, churches, and organisations to build sustainable support systems, strengthening families, empowering caregivers, and fostering resilience across communities.
           </p>
         </div>
         <div className="space-y-3">
           <h3 className="font-heading text-xl text-foreground">Accessible & flexible care</h3>
           <p className="text-sm text-muted-foreground">
-            Sessions are available both virtually and in-person, with subsidised options for those in need. We tailor our services to fit your unique context, making support accessible wherever you are in your journey.
+            Sessions are available virtually and in-person (Kakamega), with subsidised counselling pathways and sponsorship options to make support accessible wherever you are in Kenya.
           </p>
+        </div>
+      </section>
+
+      <section className="container mx-auto rounded-3xl border border-muted/30 bg-muted/20 p-8 shadow-sm" aria-labelledby="services-faq-heading">
+        <div className="space-y-6">
+          <h2 id="services-faq-heading" className="font-heading text-3xl font-semibold text-foreground">
+            Frequently asked questions about our counselling services
+          </h2>
+          <div className="space-y-5 text-base text-muted-foreground">
+            <div>
+              <h3 className="font-semibold text-foreground">What counselling services does Everyday Resilience Counselling Kenya provide?</h3>
+              <p className="mt-2">
+                We offer trauma-informed individual counselling, couples therapy, caregiver coaching, family sessions, and organisational wellbeing programmes tailored to schools, NGOs, churches, and workplaces across Kenya.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Do you provide virtual counselling sessions in Kenya?</h3>
+              <p className="mt-2">
+                Yes. Our counsellors deliver secure virtual sessions alongside in-person appointments in Kakamega so that clients across Kenya and the diaspora can access support conveniently.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">How can organisations partner with Everyday Resilience Counselling?</h3>
+              <p className="mt-2">
+                Organisations can request reflective practice groups, staff debriefs, embedded counsellors, trauma-informed trainings, and policy support by contacting our coordination team for a consultation.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

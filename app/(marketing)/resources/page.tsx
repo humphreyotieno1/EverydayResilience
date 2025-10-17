@@ -1,4 +1,5 @@
 import { BookOpen, Download, FileText } from "lucide-react";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
@@ -58,14 +59,58 @@ const resourceData = {
 };
 
 export const metadata: Metadata = {
-  title: "Resources & Psychoeducation",
+  title: "Mental Health Resources in Kenya | Everyday Resilience Counselling",
   description:
-    "Articles, guides, and downloads to support mental health awareness and everyday resilience.",
+    "Download trauma-informed guides, articles, and wellbeing resources from Everyday Resilience Counselling Kenya. Join our newsletter for monthly mental health support.",
+  openGraph: {
+    title: "Mental Health Resources in Kenya",
+    description:
+      "Access downloadable toolkits, articles, and webinar replays curated by Everyday Resilience Counselling Kenya to support your wellbeing journey.",
+  },
 };
 
 export default function ResourcesPage() {
   return (
     <div className="space-y-20 pb-16">
+      <Script
+        id="resources-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What mental health resources does Everyday Resilience Counselling Kenya provide?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "We provide trauma-informed guides, caregiver toolkits, webinar replays, and downloadable worksheets tailored for individuals, families, educators, churches, and organisations across Kenya.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can I access the resources and toolkits?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "You can download resources directly from our library and request custom toolkits or trainings by contacting Everyday Resilience Counselling Kenya for a consultation.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer a mental health newsletter for Kenya?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. Our resilience newsletter shares monthly trauma-informed practices, grounding exercises, and upcoming wellbeing events for Kenyan communities.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-900/80 py-24 text-white">
         <div className="absolute inset-0 bg-[url('/background2.jpg')] bg-cover bg-center opacity-40" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/60 to-slate-900/40" aria-hidden />
@@ -84,10 +129,13 @@ export default function ResourcesPage() {
           <div className="max-w-3xl space-y-5">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">Psychoeducation</p>
             <h1 className="font-heading text-4xl font-semibold leading-tight sm:text-5xl">
-              Tools to build understanding and nurture resilience every day
+              Mental health resources to support Kenyan individuals, families, and teams
             </h1>
             <p className="text-base text-white/80">
               We curate guides, articles, and downloads to help you care for your mental health, support loved ones, and create safer spaces in your community.
+            </p>
+            <p className="text-base text-white/80">
+              Explore trauma-informed toolkits and psychoeducation crafted by Kenyan counsellors, including caregiver resources, classroom safety guides, and organisational wellbeing practices.
             </p>
             <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
               <span className="rounded-full border border-white/30 px-4 py-2">For caregivers</span>
@@ -202,6 +250,34 @@ export default function ResourcesPage() {
             <div className="rounded-xl border border-muted/30 bg-muted/20 p-4">
               <p className="font-semibold text-foreground">Workplace wellbeing</p>
               <p className="mt-2">Equip teams with regulation breaks, peer support circles, and crisis response planning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto rounded-3xl border border-muted/30 bg-muted/20 p-8 shadow-sm" aria-labelledby="resources-faq-heading">
+        <div className="space-y-6">
+          <h2 id="resources-faq-heading" className="font-heading text-3xl font-semibold text-foreground">
+            Frequently asked questions about our mental health resources
+          </h2>
+          <div className="space-y-5 text-base text-muted-foreground">
+            <div>
+              <h3 className="font-semibold text-foreground">What resources does Everyday Resilience provide?</h3>
+              <p className="mt-2">
+                We provide trauma-informed guides, caregiver toolkits, webinar replays, policy templates, and self-regulation worksheets designed for Kenyan individuals, families, educators, and organisations.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">How do I access these resources?</h3>
+              <p className="mt-2">
+                You can explore the library online, download selected toolkits, or contact us to co-create customised materials, workshops, and trauma-informed trainings.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Do you offer a mental health newsletter for Kenya?</h3>
+              <p className="mt-2">
+                Yes. Our resilience newsletter delivers monthly grounding practices, reflective prompts, and invitations to new wellbeing programmes across Kenya.
+              </p>
             </div>
           </div>
         </div>

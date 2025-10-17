@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { ContactFormValues, contactSchema } from "@/lib/validation/contact";
 
@@ -70,6 +71,9 @@ export function ContactForm() {
 
         const result = (await response.json()) as { message?: string };
         toast.success(result.message ?? "Thanks for reaching out! We’ll reply within one business day.");
+        trackEvent("contact_form_submission", {
+          topic: data.topic,
+        });
         setStatusLevel("success");
         setStatusMessage(
           result.message ?? "Thanks for reaching out! Expect a follow-up from our coordination team within one business day."

@@ -8,9 +8,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { contactDetails, socialLinks } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Contact Everyday Resilience",
+  title: "Contact Everyday Resilience Counselling Kenya | Book Therapy",
   description:
-    "Reach out to schedule counselling, request workshops, or discuss partnership opportunities with Everyday Resilience Counselling.",
+    "Connect with Everyday Resilience Counselling Kenya to book trauma-informed therapy, request workshops, or explore partnerships. We respond to all counselling inquiries within 24 hours.",
+  openGraph: {
+    title: "Contact Everyday Resilience Counselling Kenya",
+    description:
+      "Reach out to Everyday Resilience Counselling Kenya for therapy bookings, wellbeing workshops, and partnership opportunities.",
+  },
 };
 
 const inquiryTypes = [
@@ -40,10 +45,10 @@ export default function ContactPage() {
           <div className="max-w-3xl space-y-5">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">We’d love to hear from you</p>
             <h1 className="font-heading text-4xl font-semibold leading-tight sm:text-5xl">
-              Start a counselling conversation or partner with our team
+              Book counselling, workshops, or partnerships in Kenya
             </h1>
             <p className="text-base text-white/80">
-              Complete the form to book a session, request a workshop, or explore collaboration. Our coordination team responds within 24 hours (Monday–Saturday).
+              Complete the form to book a therapy session, request a wellbeing workshop, or explore collaboration with Everyday Resilience Counselling Kenya. Our coordination team responds within 24 hours (MondaySaturday).
             </p>
             <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
               <span className="rounded-full border border-white/30 px-4 py-2">WhatsApp & phone</span>

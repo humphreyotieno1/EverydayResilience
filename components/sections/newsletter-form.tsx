@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { NewsletterFormValues, newsletterSchema } from "@/lib/validation/newsletter";
 
@@ -58,6 +59,9 @@ export function NewsletterForm({ className, source, variant = "light" }: Newslet
         const result = (await response.json()) as { message?: string };
         setStatus("success");
         setMessage(result.message ?? "Thanks for subscribing! Look out for a welcome email in the next few minutes.");
+        trackEvent("newsletter_signup", {
+          source,
+        });
         reset();
       } catch (error) {
         setStatus("error");
