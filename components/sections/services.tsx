@@ -7,28 +7,28 @@ const services = [
   {
     title: "General Counselling",
     description:
-      "Explore how personalised counselling can help you regulate emotions, process trauma, and rebuild hope.",
+      "Explore how individual counselling can help you regulate emotions, process trauma, and rebuild hope. We create a safe, supportive space to explore your story, build resilience, and develop practical coping strategies for everyday challenges.",
     image: "/services/general.jpg",
     href: "/services/general",
   },
   {
     title: "Family Counselling",
     description:
-      "Strengthen attachment, heal ruptures, and create nurturing rhythms for your entire household.",
+      "Strengthen family relationships through structured therapy sessions that enhance communication, improve conflict management, and build stronger, more supportive relationships in a safe, supportive environment.",
     image: "/services/family.jpg",
     href: "/services/family",
   },
   {
     title: "Anxiety Treatment",
     description:
-      "Gentle, evidence-based approaches that equip teens and adults to navigate anxiety with confidence.",
+      "Discover how individual counselling can help you understand the root causes of anxiety, manage overwhelming thoughts, and develop practical coping strategies for a calmer, more balanced life",
     image: "/services/anxiety.jpg",
     href: "/services/anxiety",
   },
   {
     title: "Depression Therapy",
     description:
-      "Offer yourself space to be seen, heard, and supported as you journey through seasons of heaviness.",
+      "Learn how counselling sessions can support you in navigating feelings of sadness or hopelessness, identifying triggers, and building resilience to regain motivation, joy and emotional wellbeing.",
     image: "/services/depression.jpg",
     href: "/services/depression",
   },
@@ -79,7 +79,7 @@ export function ServicesSection() {
           <Button
             asChild
             variant="ghost"
-            className="rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-700 hover:text-slate-900"
+            className="rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-700 hover:text-slate-900 hover:bg-slate-100"
           >
             <Link href="/about">Learn more about us</Link>
           </Button>

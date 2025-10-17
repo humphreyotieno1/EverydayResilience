@@ -78,7 +78,7 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
-                <Button asChild className="rounded-full bg-slate-900 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white hover:bg-slate-800">
+                <Button asChild className="rounded-full bg-slate-900 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white hover:bg-slate-900/40">
                   <Link href={`/contact`}>Learn more</Link>
                 </Button>
               </div>
@@ -134,8 +134,8 @@ export default function ServicesPage() {
           <p className="text-base text-muted-foreground">
             Sessions are available virtually or in-person (Kakamega). We begin with an intake consultation to co-create a care plan, establish goals, and choose modalities that fit your season. Subsidised options can be arranged through sponsorships and partner organisations.
           </p>
-          <p className="text-sm text-muted-foreground">
-            We also offer clinical supervision, reflective practice groups, and staff wellness programmes for counsellors and caregivers working in high-impact environments.
+          <p className="text-base text-muted-foreground">
+            We also offer reflective practice groups and staff wellness programmes for counsellors and caregivers working in high-impact environments.
           </p>
         </div>
         <Card className="border-muted/40 bg-background shadow-sm">
@@ -151,10 +151,10 @@ export default function ServicesPage() {
             <p>1. Submit an inquiry through the contact form or call our support line.</p>
             <p>2. Receive a response within 24 hours with scheduling options.</p>
             <p>3. Complete the intake process and agree on session frequency.</p>
-            <p>4. Begin sessions with ongoing reviews every 6-8 weeks.</p>
+            <p>4. Begin sessions with ongoing progress reviews.</p>
             <Link
               href="/contact"
-              className="inline-flex items-center font-semibold text-primary transition-colors hover:text-primary/80"
+              className="inline-flex items-center font-semibold text-primary transition-colors hover:text-primary/80 hover:bg-primary/10"
             >
               Book a consultation →
             </Link>

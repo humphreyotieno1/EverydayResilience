@@ -109,7 +109,7 @@ export default function StoriesPage() {
             If Everyday Resilience has impacted you or your organisation, we would love to hear from you. Your story encourages others to seek help and helps us ensure our services remain responsive to community needs.
           </p>
           <p className="text-sm text-muted-foreground">
-            Email us at <span className="font-semibold text-foreground">stories@everydayresilience.org</span> or include a note in the contact form.
+            Email us at <span className="font-semibold text-foreground">info@everydayresiliencekenya.org</span> or include a note in the contact form.
           </p>
         </div>
       </section>

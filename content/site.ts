@@ -8,7 +8,7 @@ export const siteNavigation = [
 ];
 
 export const contactDetails = {
-  email: "info@everydayresilience.org",
+  email: "info@everydayresiliencecounsellingkenya.org",
   phoneKe: "+254 712 302 318",
   location: "Kakamega, Kenya",
   officeHours: "Monday – Saturday | 9:00AM – 5:00PM",

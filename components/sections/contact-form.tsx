@@ -77,10 +77,11 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="space-y-5">
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="name">Name</Label>
+          <Label htmlFor="name" className="text-sm text-muted-foreground">Name</Label>
           <Input
             id="name"
             placeholder="Your full name"
+            className="text-sm text-muted-foreground"
             aria-invalid={Boolean(errors.name)}
             {...register("name")}
           />
@@ -88,12 +89,13 @@ export function ContactForm() {
             <p className="text-sm text-destructive">{errors.name.message}</p>
           ) : null}
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
+        <div className="space-y-2 text-sm text-muted-foreground">
+          <Label htmlFor="email" className="text-sm text-muted-foreground">Email</Label>
           <Input
             id="email"
             type="email"
             placeholder="you@example.com"
+            className="text-sm text-muted-foreground"
             aria-invalid={Boolean(errors.email)}
             {...register("email")}
           />
@@ -104,11 +106,12 @@ export function ContactForm() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor="phone">Phone (optional)</Label>
+        <div className="space-y-2 text-sm text-muted-foreground">
+          <Label htmlFor="phone" className="text-sm text-muted-foreground">Phone (optional)</Label>
           <Input
             id="phone"
             placeholder="WhatsApp or phone number"
+            className="text-sm text-muted-foreground"
             aria-invalid={Boolean(errors.phone)}
             {...register("phone")}
           />
@@ -116,11 +119,12 @@ export function ContactForm() {
             <p className="text-sm text-destructive">{errors.phone.message}</p>
           ) : null}
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="organisation">Organisation (optional)</Label>
+        <div className="space-y-2 text-sm text-muted-foreground">
+          <Label htmlFor="organisation" className="text-sm text-muted-foreground">Organisation (optional)</Label>
           <Input
             id="organisation"
             placeholder="School, church, NGO, etc."
+            className="text-sm text-muted-foreground"
             aria-invalid={Boolean(errors.organisation)}
             {...register("organisation")}
           />
@@ -131,7 +135,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="topic">Inquiry type</Label>
+        <Label htmlFor="topic" className="text-sm text-muted-foreground">Inquiry type</Label>
         <div className="grid gap-2 sm:grid-cols-2">
           {topicOptions.map((option) => (
             <label
@@ -154,11 +158,12 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message">How can we support you?</Label>
+        <Label htmlFor="message" className="text-sm text-muted-foreground">How can we support you?</Label>
         <Textarea
           id="message"
           rows={5}
           placeholder="Share a brief overview of your needs, preferred schedule, or any questions."
+          className="text-sm text-muted-foreground"
           aria-invalid={Boolean(errors.message)}
           {...register("message")}
         />
@@ -171,7 +176,7 @@ export function ContactForm() {
         <p className="text-xs text-muted-foreground">
           By submitting this form you consent to us contacting you regarding your inquiry. Read our privacy policy for details.
         </p>
-        <Button type="submit" disabled={isPending} className="rounded-full">
+        <Button type="submit" disabled={isPending} className="rounded-full text-sm font-semibold uppercase tracking-[0.2em]">
           {isPending ? "Sending…" : "Send message"}
         </Button>
       </div>

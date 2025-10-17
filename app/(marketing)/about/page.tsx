@@ -75,7 +75,7 @@ export default function AboutPage() {
               Creating safe spaces where resilience grows every day
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Healing is a journey nurtured through compassionate support, community collaboration, and evidence-based interventions. From Nairobi to rural counties, our counsellors and trainers partner with organisations, schools, churches, and frontline teams to ensure safe, sustainable care.
+              Healing is a journey nurtured through compassionate support, community collaboration, and evidence-based interventions. Our counsellors and trainers partner with organisations, schools, churches, and frontline teams to ensure safe, sustainable care.
             </p>
             <div className="grid gap-4 text-sm text-muted-foreground sm:grid-cols-2">
               <div className="rounded-3xl border border-muted/30 bg-background p-5 shadow-sm">
@@ -126,7 +126,7 @@ export default function AboutPage() {
                 Meet our counsellors and facilitators
               </h2>
               <p className="text-base text-muted-foreground">
-                Our multidisciplinary team blends psychological expertise, pastoral care experience, and lived cultural insight. Every counsellor commits to continuous supervision, ethical practice, and gentle presence.
+                Our multidisciplinary team blends psychological expertise and lived cultural insight. Every counsellor commits to continuous supervision, ethical practice, and gentle presence.
               </p>
               <Link
                 href="/contact"

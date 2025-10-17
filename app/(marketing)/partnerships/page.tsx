@@ -113,7 +113,7 @@ export default function PartnershipsPage() {
                     </div>
                   ))}
                 </div>
-                <Button asChild className="rounded-full bg-slate-900 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white hover:bg-slate-800">
+                <Button asChild className="rounded-full bg-slate-900 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white hover:bg-slate-300">
                   <a href="#donate">Start a conversation</a>
                 </Button>
               </div>
@@ -180,10 +180,10 @@ export default function PartnershipsPage() {
             <CardDescription>Our partnerships team will respond within one business day.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-2 text-sm text-muted-foreground">
-            <p>Email: partnerships@everydayresilience.org</p>
+            <p>Email: info@everydayresiliencekenya.org</p>
             <p>Phone: {contactDetails.phoneKe}</p>
             <p>Mailing address: {contactDetails.mailingAddress}</p>
-            <Button asChild variant="outline" className="w-full rounded-full border-slate-300 text-xs font-semibold uppercase tracking-[0.2em]">
+            <Button asChild variant="outline" className="w-full rounded-full border-slate-300 text-xs font-semibold uppercase tracking-[0.2em] hover:bg-slate-300">
               <a href="/contact">Contact the team</a>
             </Button>
           </CardContent>
@@ -197,8 +197,8 @@ export default function PartnershipsPage() {
             Every contribution is managed with transparency. We provide impact briefs twice per year outlining counselling hours delivered, communities reached, and emerging needs. Partners are invited to join quarterly prayer and reflection calls with our counsellors.
           </p>
           <Separator className="my-4" />
-          <p className="text-sm text-muted-foreground">
-            Request our latest annual report or schedule a partnership discovery call by emailing partnerships@everydayresilience.org.
+          <p className="text-base text-muted-foreground">
+            Request our latest annual report or schedule a partnership discovery call by emailing info@everydayresiliencekenya.org.
           </p>
         </div>
       </section>
