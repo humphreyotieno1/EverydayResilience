@@ -42,7 +42,7 @@ export default function EventsPage() {
               Upcoming workshops and community events
             </h1>
             <p className="text-base text-white/80">
-              We're preparing exciting workshops, training sessions, and community events focused on mental health, trauma-informed care, and building resilience. Stay tuned for announcements about our upcoming programs.
+              We&apos;re preparing exciting workshops, training sessions, and community events focused on mental health, trauma-informed care, and building resilience. Stay tuned for announcements about our upcoming programs.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function EventsPage() {
             Events Coming Soon
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            We're working hard to bring you valuable workshops and community events. 
+            We&apos;re working hard to bring you valuable workshops and community events. 
             Check back soon for updates on our upcoming programs.
           </p>
           
@@ -139,7 +139,7 @@ export default function EventsPage() {
                 Interested in hosting an event?
               </h2>
               <p className="text-base text-muted-foreground">
-                We partner with organizations, schools, churches, and community groups to deliver tailored workshops and training programs. Let's discuss how we can support your community's mental health needs.
+                We partner with organizations, schools, churches, and community groups to deliver tailored workshops and training programs. Let&apos;s discuss how we can support your community&apos;s mental health needs.
               </p>
               <Button asChild className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
                 <Link href="/partnerships">Explore Partnerships</Link>
