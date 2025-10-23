@@ -141,7 +141,7 @@ export default function EventsPage() {
               <p className="text-base text-muted-foreground">
                 We partner with organizations, schools, churches, and community groups to deliver tailored workshops and training programs. Let&apos;s discuss how we can support your community&apos;s mental health needs.
               </p>
-              <Button asChild className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+              <Button asChild className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90 shadow">
                 <Link href="/partnerships">Explore Partnerships</Link>
               </Button>
             </div>
