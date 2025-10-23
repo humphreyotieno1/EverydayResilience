@@ -7,38 +7,45 @@ import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
-    name: "Michelle Meyer, RD",
-    role: "Clinical Registered Dietitian",
+    name: "Peninah W.",
+    role: "Client",
     quote:
-      "“As a dietitian, real food is ideal. Everyday Resilience helps caregivers identify nourishing routines that ground families during healing.”",
+      "When my relationship ended, I felt like my world had fallen apart. Counselling gave me a safe space to express my pain and rediscover who I am beyond the relationship. I've learned to love myself again, make independent decisions, and focus on my and child's well-being. I'm finally at peace with my past.",
     avatar: "/profile.png",
   },
   {
-    name: "Sharon Palmer, Registered Dietitian",
-    role: "“The Plant-Powered Dietitian”",
+    name: "Wang'ombe",
+    role: "Client",
     quote:
-      "“Decades of research show how consistent support boosts resilience and wellbeing. Everyday Resilience pairs compassionate counselling with practical routines.”",
+      "My counsellor helped me see how unhealthy my work environment had become. I had been holding on out of fear and self-doubt. Through therapy, I gained clarity and courage and finally left the toxic workplace, took time to heal, and now I'm working in a place where I'm respected and valued.",
     avatar: "/profile.png",
   },
   {
-    name: "Tavis Piattoly, MS, RD, LDN",
-    role: "Registered Dietitian",
+    name: "Amina K.",
+    role: "Client",
     quote:
-      "“Versatility matters—this team flexes with each family’s pace, offering gentle structure while celebrating progress and rest.”",
+      "I did not understand how growing up in a chaotic family had affected my life until I looked around and realized that I did not have any stable relationships. Counselling has taught me how to set healthy boundaries and give people a chance to prove themselves instead of projecting my desires unto them. The result has been stronger, calmer relationships that I can rely on.",
     avatar: "/profile.png",
   },
   {
-    name: "Parent, Nairobi",
-    role: "Caregiver",
+    name: "Ochieng K.",
+    role: "Client",
     quote:
-      "“Our family finally feels equipped to support our child. The counsellor created a safe space and gave us practical tools we use every day.”",
+      "Before counselling, social situations used to terrify me. I would replay encounters in my mind days after and cringe at all the things that I figured I had done wrong. I missed out on networking events and social activities that I might have enjoyed. My therapist helped me challenge the voice in my head and accept that I cannot be perfect in every situation. She also encouraged me to expose myself to more social encounters, which to my relief has helped a lot and helped in building my social network.",
     avatar: "/profile.png",
   },
   {
-    name: "Student, Nairobi",
-    role: "Student",
+    name: "Wambui",
+    role: "Client",
     quote:
-      "“The counsellor created a safe space and gave us practical tools we use every day.”",
+      "I sought counselling after a really bad breakup thinking that I just had to get over it. However, my counsellor helped me understand my patterns in love, my fear about being alone, and helped me understand what a healthy connection looks like. Learning this has improved my dating life tremendously. Now, I can walk away in the early stages instead of setting myself up for a world of pain.",
+    avatar: "/profile.png",
+  },
+  {
+    name: "Winnie",
+    role: "Client",
+    quote:
+      "After losing my dad, I was consumed by grief for such a long time. Talking through my grief with a professional has helped me navigate my pain and face it instead of burying it. While I'm not over it, and don't think I will be for a long time, I have learnt to live with the loss without letting it consume me.",
     avatar: "/profile.png",
   },
 ];
@@ -90,12 +97,12 @@ export function TestimonialsSection() {
     <section className="bg-white py-20">
       <div className="container mx-auto space-y-12 px-4">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Stories of hope</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Stories of healing</p>
           <h2 className="font-heading text-3xl font-semibold text-slate-900 sm:text-4xl">
-            Voices from the families and partners we serve
+            Real stories from our clients
           </h2>
           <p className="mt-4 text-base text-slate-500">
-            Gentle, consistent counselling changes lives. Hear how caregivers, teachers, and partners experience Everyday Resilience.
+            Discover how trauma-informed counselling has helped individuals overcome challenges, heal from past experiences, and build resilience for a brighter future.
           </p>
         </div>
 
