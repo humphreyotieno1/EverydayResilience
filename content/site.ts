@@ -3,6 +3,7 @@ export const siteNavigation = [
   { href: "/services", label: "Services" },
   { href: "/resources", label: "Resources" },
   { href: "/stories", label: "Stories" },
+  { href: "/events", label: "Events" },
   { href: "/partnerships", label: "Partnerships" },
   { href: "/contact", label: "Contact" },
 ];

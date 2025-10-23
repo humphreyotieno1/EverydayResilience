@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { siteNavigation } from '@/content/site'
+// import { siteNavigation } from '@/content/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.everydayresiliencecounsellingkenya.org'
@@ -38,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/stories`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/events`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.7,
