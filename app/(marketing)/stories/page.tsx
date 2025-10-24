@@ -30,7 +30,7 @@ When I came across e-poster for Everyday Resilience Counselling Kenya, I was at 
 I still remember the relief I felt after the first session. Someone finally listened to my frustration about my living arrangement without invalidating my feelings. Turns out, I was not crazy, I was paying for free housing with my mental health! While I would love to say that I was magically fixed after the first session, it would be a lie, and as someone who has gotten the help I needed, I would hate to mislead someone else. It took a couple of sessions, but gradually, I was equipped with tools and coping mechanisms to navigate my situation.
 
 I will always recommend therapy to anyone struggling with a dysfunctional family dynamic. For me, having access to virtual therapy sessions was a blessing. It made it easier to talk about my feelings, especially as someone who hates opening up. I am in a better place now. I got a new job and moved into my own space, but I cannot imagine how I would have navigated that season of unemployment without therapy. I believe it would have broken me.`,
-    avatar: "/profile.png",
+    avatar: "/stories/ruthavatar.jpeg",
     category: "Family Dynamics",
     image: "/stories/ruth.jpg",
   },
@@ -51,7 +51,7 @@ Therapy changed everything for me. At first, I went because my parents insisted 
 Once that clicked, everything began to change. I started reaching out more, spending time with my dad's wife and my step-siblings, and even talking to my mom's husband about things like university. I began to feel at home in both places. Now, instead of feeling left behind, I feel supported. I have more people who care about me, more adults I can turn to when I need advice or help. It's not perfect, but I am at peace. I know I don't have to choose sides, I belong in both homes.
 
 It hasn't been an easy journey, but I'm proud of how far I've come.`,
-    avatar: "/profile.png",
+    avatar: "/stories/danavatar.jpeg",
     category: "Family Transitions",
     image: "/stories/dan.jpg",
   },
@@ -88,7 +88,7 @@ And here's the most beautiful part: as I learned to free myself from fear and th
 I can't say I'll never need therapy again. I'm still a work in progress, aren't we all? But I can say this with certainty: my life is now much better. My mind, my spirit, my entire outlook on life have transformed.
 
 Everyday Resilience Kenya saw me through the darkest moments of my life and helped me find myself again.`,
-    avatar: "/profile.png",
+    avatar: "/stories/julieavatar.jpeg",
     category: "Trauma Recovery",
     image: "/stories/julie.jpg",
   },
