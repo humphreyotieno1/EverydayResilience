@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.everydayresiliencecounsellingkenya.org"),
   icons: {
     icon: [
-      { url: "/logo.jpeg", sizes: "32x32", type: "image/jpeg" },
-      { url: "/logo.jpeg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/icon.jpg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/icon.jpg", sizes: "16x16", type: "image/jpeg" },
     ],
     apple: [
-      { url: "/logo.jpeg", sizes: "180x180", type: "image/jpeg" },
+      { url: "/icon.jpg", sizes: "180x180", type: "image/jpeg" },
     ],
-    shortcut: "/logo.jpeg",
+    shortcut: "/icon.jpg",
   },
   openGraph: {
     title: "Everyday Resilience Counselling Kenya",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.jpeg",
+        url: "/icon.jpg",
         width: 1200,
         height: 630,
         alt: "Everyday Resilience Counselling Kenya",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Everyday Resilience Counselling Kenya",
     description:
       "Compassionate counselling, workshops, and psychoeducation resources for Kenyan communities.",
-    images: ["/logo.jpeg"],
+    images: ["/icon.jpg"],
   },
   alternates: {
     canonical: "https://www.everydayresiliencecounsellingkenya.org",
