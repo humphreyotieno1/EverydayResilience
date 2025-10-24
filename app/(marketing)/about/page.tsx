@@ -81,7 +81,7 @@ export default function AboutPage() {
               Trauma-informed counsellors supporting Kenya&apos;s individuals, families, and communities
             </h1>
             <p className="text-base text-white/80">
-              Everyday Resilience Counselling was founded by Zelipa Njoki Murage to bridge the gap in accessible, faith-sensitive counselling services across Kenya. With over a decade of experience supporting children, families, caregivers, and frontline teams, our counsellors offer trauma-informed care rooted in empathy, dignity, and practical resilience.
+              Everyday Resilience Counselling was founded by Njoki Murage to bridge the gap in accessible, faith-sensitive counselling services across Kenya. With over a decade of experience supporting children, families, caregivers, and frontline teams, our counsellors offer trauma-informed care rooted in empathy, dignity, and practical resilience.
             </p>
             <p className="text-base text-white/80">
               From individual therapy and caregiver coaching to organisational w  ellbeing programmes, our multidisciplinary team integrates cultural insight, spiritual care, and evidence-based interventions to walk with you through every season of change.

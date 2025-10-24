@@ -9,13 +9,13 @@ import { ArrowUp, PhoneCall, MessageCircle } from "lucide-react";
 const ACTIONS = [
   {
     label: "Call Us",
-    href: "tel:+254711000000",
+    href: "tel:+254712302318",
     icon: PhoneCall,
     className: "bg-slate-900 hover:bg-slate-800 text-white",
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/254711000000",
+    href: "https://wa.me/+254712302318",
     icon: MessageCircle,
     className: "bg-[#25D366] hover:bg-[#1EB357] text-white",
   },
