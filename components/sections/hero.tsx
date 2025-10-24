@@ -12,7 +12,7 @@ const carouselImages = ["/bg1.jpg", "/background2.jpg", "/background1.jpg"];
 
 const heroStats = [
   { value: "300+", label: "Clients Served" },
-  { value: "95%", label: "Satisfaction Rate" },
+  { value: "95%", label: "Success Stories" },
   { value: "10+", label: "Years Experience" },
 ];
 
@@ -73,14 +73,14 @@ export function HeroSection() {
           <div className="space-y-8 text-left sm:max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-orange-700">
               <Heart className="h-4 w-4" aria-hidden />
-              Compassionate counselling in Kenya
+              Empowering resilience, restoring hope
             </div>
 
             <div className="space-y-5">
               <h1 className="font-heading text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-                We always provide
+                Compassionate Counselling
                 <span className="relative ml-3 inline-block">
-                  best service
+                  in Kenya
                   <span className="absolute -bottom-2 left-0 h-2 w-full rounded bg-orange-300/80" aria-hidden />
                 </span>
               </h1>
@@ -124,54 +124,33 @@ export function HeroSection() {
                 />
               </div>
 
-              <div className="absolute top-10 -left-8 w-44 rounded-2xl border border-white/70 bg-white p-4 shadow-xl">
+              <div className="absolute top-10 -left-8 w-52 rounded-2xl border border-white/70 bg-white p-5 shadow-xl">
                 <div className="mb-3 flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100">
-                    <TrendingUp className="h-5 w-5 text-orange-500" aria-hidden />
+                    <svg className="h-5 w-5 text-orange-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0120 15V8a2 2 0 00-2-2h-1.586A2 2 0 0115 4.586V3a2 2 0 00-2-2H9a2 2 0 00-2 2v1.586A2 2 0 016.586 6H5a2 2 0 00-2 2v7c0 .71.37 1.34.99 1.67L5 17h5"/>
+                    </svg>
                   </div>
                   <div>
-                    <p className="text-xs text-slate-500">Client growth</p>
-                    <p className="text-lg font-bold text-orange-600">55</p>
+                    <p className="text-xs text-slate-500">Comfort offered</p>
+                    <p className="text-lg font-bold text-orange-600">Countless</p>
                   </div>
                 </div>
-                <div className="flex h-16 items-end gap-1">
-                  {[40, 60, 45, 70, 55, 65, 50].map((height, idx) => (
-                    <div
-                      key={idx}
-                      className="flex-1 rounded-sm bg-gradient-to-t from-orange-400 to-orange-300"
-                      style={{ height: `${height}%` }}
-                      aria-hidden
-                    />
-                  ))}
-                </div>
-                <div className="mt-2 flex justify-between text-[0.65rem] text-slate-500">
-                  <span>Mo</span>
-                  <span>Tu</span>
-                  <span>We</span>
-                  <span>Th</span>
-                  <span>Fr</span>
+                <div className="text-slate-700 text-[0.93rem] py-2 leading-snug">
+                  Every conversation is rooted in empathy, safe space, and understanding.<br />
+                  <span className="inline-flex items-center gap-1 mt-1 text-xs text-orange-500 font-medium">
+                    <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656l-6.15 6.15a.6.6 0 01-.848 0l-6.15-6.15a4 4 0 010-5.656z" /></svg>
+                    You are not alone.
+                  </span>
                 </div>
               </div>
 
-              <div className="absolute top-32 right-3 hidden gap-2 rounded-full bg-white p-1 shadow-lg sm:flex">
-                {[
-                  { label: "Daily", active: false },
-                  { label: "Week", active: true },
-                  { label: "Month", active: false },
-                ].map((item) => (
-                  <button
-                    key={item.label}
-                    type="button"
-                    className={cn(
-                      "rounded-full px-4 py-2 text-xs font-medium transition-colors",
-                      item.active
-                        ? "bg-slate-900 text-white"
-                        : "text-slate-600 hover:bg-slate-100"
-                    )}
-                  >
-                    {item.label}
-                  </button>
-                ))}
+              {/* Fixed: Remove unused static tab UI and replace with a helpful stat or visual */}
+              <div className="absolute top-32 right-3 hidden rounded-full bg-white/90 px-4 py-2 shadow-lg sm:flex items-center gap-2">
+                <svg className="h-5 w-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.383 2.457a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.538 1.118l-3.383-2.457a1 1 0 00-1.175 0l-3.382 2.457c-.784.57-1.838-.197-1.539-1.118l1.288-3.97a1 1 0 00-.364-1.118L2.05 9.397c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.97z"/>
+                </svg>
+                <span className="text-xs font-medium text-slate-800">Resilience, Restored</span>
               </div>
             </div>
           </div>

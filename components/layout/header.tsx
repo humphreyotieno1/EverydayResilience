@@ -61,122 +61,127 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50">
-      
-      
       <div className="border-b border-muted/30 bg-background/90 shadow-sm backdrop-blur">
-        <div className="mx-auto flex h-20 max-w-[1280px] items-center px-4 sm:h-24 sm:px-6">
-        <Link
-          href="/"
-          className="mr-auto mr-10 flex items-center gap-3"
-          aria-label="Everyday Resilience home"
-        >
-          <span className="relative h-12 w-12 overflow-hidden rounded-full">
-            <Image
-              src="/logo.jpeg"
-              alt="Everyday Resilience logo"
-              fill
-              priority
-              sizes="48px"
-            />
-          </span>
-          <div className="leading-tight sm:flex sm:flex-col">
-            <span className="font-heading text-md font-semibold text-foreground">
-              EVERYDAY 
-            </span>
-            <span className="font-heading text-md font-semibold text-foreground">
-              RESILIENCE
-            </span>
+        <div className="flex h-20 items-center justify-between sm:h-24">
+          {/* Logo positioned at absolute left */}
+          <div className="flex items-center pl-4 sm:pl-6">
+            <Link
+              href="/"
+              className="flex items-center gap-3"
+              aria-label="Everyday Resilience home"
+            >
+              <span className="relative h-12 w-12 overflow-hidden rounded-full">
+                <Image
+                  src="/logo.jpeg"
+                  alt="Everyday Resilience logo"
+                  fill
+                  priority
+                  sizes="48px"
+                />
+              </span>
+              <div className="leading-tight sm:flex sm:flex-col">
+                <span className="font-heading text-md font-semibold text-foreground">
+                  EVERYDAY 
+                </span>
+                <span className="font-heading text-md font-semibold text-foreground">
+                  RESILIENCE
+                </span>
+              </div>
+            </Link>
           </div>
-        </Link>
 
-        <div className="hidden items-center gap-6 xl:gap-8 lg:flex">
-          <nav className="flex items-center gap-1 xl:gap-3">
-            {siteNavigation.map((item) => (
-              <NavLink
-                key={item.href}
-                href={item.href}
-                label={item.label}
-                isActive={pathname === item.href}
-              />
-            ))}
-          </nav>
-
-          <div className="ml-3 flex items-center gap-2 xl:ml-5 xl:gap-3">
-            {desktopCtas.map((cta) => (
-              <Button
-                key={cta.href}
-                asChild
-                size="sm"
-                className={cn(
-                  "rounded-full px-3 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.12em] shadow-sm transition-transform hover:-translate-y-0.5 xl:px-5 xl:text-[0.7rem]",
-                  cta.className
-                )}
-              >
-                <Link href={cta.href}>{cta.label}</Link>
-              </Button>
-            ))}
+          {/* Navigation centered */}
+          <div className="hidden items-center gap-6 xl:gap-8 lg:flex">
+            <nav className="flex items-center gap-1 xl:gap-3">
+              {siteNavigation.map((item) => (
+                <NavLink
+                  key={item.href}
+                  href={item.href}
+                  label={item.label}
+                  isActive={pathname === item.href}
+                />
+              ))}
+            </nav>
           </div>
-        </div>
 
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <div className="flex items-center justify-end lg:hidden">
+          {/* CTA buttons positioned at absolute right */}
+          <div className="flex items-center pr-4 sm:pr-6">
+            <div className="hidden items-center gap-2 xl:gap-3 lg:flex">
+              {desktopCtas.map((cta) => (
                 <Button
-                  variant="ghost"
-                  size="icon"
-                  className="inline-flex text-black"
-                  aria-label="Open navigation menu"
-                >
-                  {open ? (
-                    <X className="h-5 w-5 text-black" aria-hidden />
-                  ) : (
-                    <Menu className="h-5 w-5 text-black" aria-hidden />
+                  key={cta.href}
+                  asChild
+                  size="sm"
+                  className={cn(
+                    "rounded-full px-3 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.12em] shadow-sm transition-transform hover:-translate-y-0.5 xl:px-5 xl:text-[0.7rem]",
+                    cta.className
                   )}
+                >
+                  <Link href={cta.href}>{cta.label}</Link>
                 </Button>
-              </div>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-[320px] bg-background/95 backdrop-blur">
-              <SheetHeader className="items-start border-b pb-4">
-                <SheetTitle className="flex items-center gap-3 text-left">
-                  <span className="relative h-10 w-10 overflow-hidden rounded-full bg-muted">
-                    <Image src="/logo.jpeg" alt="Everyday Resilience logo" fill sizes="40px" />
-                  </span>
-                  <span className="font-heading text-lg text-foreground">EVERYDAY RESILIENCE</span>
-                </SheetTitle>
-              </SheetHeader>
-              <nav className="mt-6 space-y-4">
-                {siteNavigation.map((item) => (
-                  <SheetClose asChild key={item.href}>
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        "flex items-center gap-2 rounded-xl border border-transparent px-3 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:border-primary/30 hover:bg-primary/5 hover:text-primary",
-                        pathname === item.href && "border-primary/40 bg-primary/10 text-primary"
-                      )}
-                      onClick={() => setOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </SheetClose>
-                ))}
-              </nav>
-              <div className="mt-8 space-y-3">
-                {desktopCtas.map((cta) => (
-                  <SheetClose asChild key={cta.href}>
-                    <Link
-                      href={cta.href}
-                      className={cn(
-                        "flex items-center justify-center rounded-full px-4 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-sm",
-                        cta.className
-                      )}
-                    >
-                      {cta.label}
-                    </Link>
-                  </SheetClose>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+              ))}
+            </div>
+
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <div className="flex items-center justify-end lg:hidden">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="inline-flex text-black"
+                    aria-label="Open navigation menu"
+                  >
+                    {open ? (
+                      <X className="h-5 w-5 text-black" aria-hidden />
+                    ) : (
+                      <Menu className="h-5 w-5 text-black" aria-hidden />
+                    )}
+                  </Button>
+                </div>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[320px] bg-background/95 backdrop-blur">
+                <SheetHeader className="items-start border-b pb-4">
+                  <SheetTitle className="flex items-center gap-3 text-left">
+                    <span className="relative h-10 w-10 overflow-hidden rounded-full bg-muted">
+                      <Image src="/logo.jpeg" alt="Everyday Resilience logo" fill sizes="40px" />
+                    </span>
+                    <span className="font-heading text-lg text-foreground">EVERYDAY RESILIENCE</span>
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="mt-6 space-y-4">
+                  {siteNavigation.map((item) => (
+                    <SheetClose asChild key={item.href}>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          "flex items-center gap-2 rounded-xl border border-transparent px-3 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:border-primary/30 hover:bg-primary/5 hover:text-primary",
+                          pathname === item.href && "border-primary/40 bg-primary/10 text-primary"
+                        )}
+                        onClick={() => setOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </nav>
+                <div className="mt-8 space-y-3">
+                  {desktopCtas.map((cta) => (
+                    <SheetClose asChild key={cta.href}>
+                      <Link
+                        href={cta.href}
+                        className={cn(
+                          "flex items-center justify-center rounded-full px-4 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-sm",
+                          cta.className
+                        )}
+                      >
+                        {cta.label}
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

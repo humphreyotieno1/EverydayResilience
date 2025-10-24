@@ -14,6 +14,16 @@ export const metadata: Metadata = {
   description:
     "Trauma-informed counselling and wellness services in Kenya for individuals, couples, families, and organizations. Book compassionate, evidence-based support today.",
   metadataBase: new URL("https://www.everydayresiliencecounsellingkenya.org"),
+  icons: {
+    icon: [
+      { url: "/logo.jpeg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/logo.jpeg", sizes: "16x16", type: "image/jpeg" },
+    ],
+    apple: [
+      { url: "/logo.jpeg", sizes: "180x180", type: "image/jpeg" },
+    ],
+    shortcut: "/logo.jpeg",
+  },
   openGraph: {
     title: "Everyday Resilience Counselling Kenya",
     description:
@@ -21,12 +31,21 @@ export const metadata: Metadata = {
     url: "https://www.everydayresiliencecounsellingkenya.org",
     siteName: "Everyday Resilience Counselling Kenya",
     type: "website",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Everyday Resilience Counselling Kenya",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Everyday Resilience Counselling Kenya",
     description:
       "Compassionate counselling, workshops, and psychoeducation resources for Kenyan communities.",
+    images: ["/logo.jpeg"],
   },
   alternates: {
     canonical: "https://www.everydayresiliencecounsellingkenya.org",
