@@ -18,14 +18,14 @@ Thank you for sharing the comprehensive feedback! The website is live and receiv
 **Why it matters:** Users think the website is broken and leave.  
 **What we need from you:**
 - Detailed information about each service type
-- Pricing for each service
+- What to expect from each service
+- Pricing for each service & outcomes
 - What clients can expect in first session
 - Typical session length and number
+- How the progress is reviewed
 
 ### 2. **Email Problems**
-**What's wrong:** Newsletter emails say "unsubscribe" but there's no link.  
-**Why it matters:** Legal compliance (CAN-SPAM) and trust issues.  
-**What we need:** Already fixed by developers, but please review test emails.
+**What's wrong:** Newsletter emails say "unsubscribe" but there's no link. To be fixed
 
 ### 3. **Payment Not Set Up**
 **What's wrong:** Bank details and M-Pesa aren't active yet.  
@@ -40,10 +40,7 @@ Thank you for sharing the comprehensive feedback! The website is live and receiv
 **What's wrong:** Facebook, Instagram show different website links; LinkedIn says Nairobi instead of Kakamega.  
 **Why it matters:** Confuses visitors and harms SEO.  
 **What you need to do:**
-- Update Facebook bio to: `everydayresiliencekenya.org`
-- Update Instagram bio to: `everydayresiliencekenya.org`
-- Update LinkedIn location from Nairobi to Kakamega
-- Update any website links on social platforms
+- Provide social media handles
 
 ---
 
